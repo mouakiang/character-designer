@@ -30,13 +30,16 @@ bottomDropdown.addEventListener('change', () => {
 });
 
 catchphraseButton.addEventListener('click', () => {
-    // catchphraseButton.src = `assets/head-${catchphraseButton.value}.png`;
-    // catchphraseButton.src = `assets/head-${catchphraseButton.value}.png`;
+    catchphraseButton.src = `assets/head-${catchphraseButton.value}.png`;
     // increment the head change count state
+    catchPhrases++;
     // update the dom for the head (use style.backgroundImage on the headEl div instead of trying to set the .src -- it's NOT an img tag!)
+    catchphrasesEl.style.backgroundImage = `url("./assets/${catchphraseButton.value}-designer.png)`;
     // catchphrasesEl.style.backgroundImage = `url("./assets/${catchphraseButton.value}-designer.png")`;
+    displayStats();
     // update the stats to show the new count (call displayStats() to do this work)
     // catchphrasesEl.textContent = catchphrasesEl;
+    catchphrasesEl.textContent = catchphrasesEl;
 });
 
 function displayStats() {
